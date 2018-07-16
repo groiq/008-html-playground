@@ -9,3 +9,7 @@
 .blueblood {
         color: #0000ff;
     }
+    
+table, td, th {
+    border: 1px solid #000000;
+}
