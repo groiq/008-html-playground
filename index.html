@@ -9,6 +9,44 @@
 
 <body>
 
+<main>
+    <p>This site is for practicing web technologies. </p>
+
+    
+    <form id="testform" action="mailto:mail@domain" enctype="text/plain" method="post">
+        <label>einzeiliger text<input type="text" name="one-line" autofocus="autofocus" /></label><br/>
+        <label>ja, ich will!<input type="checkbox" name="yes"/></label><br/>
+        <label>Mehrzeiliger Text<textarea name="mehrzeil">Äh... Hallo?</textarea><br />
+        <label>Option selection:
+            <select name="dropdown[]" multiple>
+                <option value="drop1">drop1</option>
+                <option value="drop2" selected="selected">drop2</option>
+                <option value="drop3">drop3</option>
+            </select>
+        </label><br />
+        <label>Option list again
+            <input list="options" name="optionlist" type="text"/>
+                <datalist id="options">
+                    <option value="first">
+                    <option value="second">
+                    <option value="third">
+                </datalist>
+        </label><br />
+            <label><input type="checkbox" name="check" value="1"/>one</label>
+            <label><input type="checkbox" name="check" value="2"/>two</label>
+            <label><input type="checkbox" name="check" value="3"/>three</label>
+        <br />
+            <label><input type="radio" name="gaga" value="1"/>radio 1</label>
+            <label><input type="radio" name="gaga" value="2"/>radio 2</label>
+            <label><input type="radio" name="gaga" value="3"/>radio 3</label>
+        <br />
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <!-- <button type="button">Button</button> -->
+    </form>
+ 
+</main>
+
 <header>
     <h1>HTML Playground</h1>
 </header>
@@ -18,44 +56,6 @@
         <li>this page</li>
     </ul>
 </nav>
-
-<main>
-    <p>This site is for practicing web technologies. </p>
-
-    <table>
-        <caption>This is a table.</caption>
-        <thead>
-            <tr>
-                <th>Left</th>
-                <th>Right</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Left One</td>
-                <td>Right One</td>
-            </tr>
-            <tr>
-                <td>Left Two</td>
-                <td>Right Two</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="2">this is a footer.</td>
-            </tr>
-        </tfoot>
-    </table>
-    
-    <form id="testform" action="mailto:mail@domain" enctype="text/plain" method="post">
-        <input type="text" name="name" id="name" label="name" />
-        <input type="date" name="datum" value="2012-01-01"/>
-        <input type="email" name="email" value="name@provider.de"/>
-        <input name="schwaz" type="color"/>
-        <button type="submit">Submit</button>
-    </form>
- 
-</main>
 
 <aside>
     <p>Things to do:</p>
