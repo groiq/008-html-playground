@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Playground</title>
     <link rel="stylesheet" href="style.css" />
-<head>
+</head>
 
 <body>
 
@@ -47,15 +47,12 @@
         </tfoot>
     </table>
     
-    <form id="testform" action="mailto:mail@domain" enctype="text/plain">
-        <input type="text" list="firstlist"/>
-            <datalist id="firstlist">
-                <option value="11"/>
-                <option value="12"/>
-            </datalist>
-        <input type="text" id="name"/ label="name" />
-        <button action="submit"/>
-        <!-- <input type="button" action="submit" /> -->
+    <form id="testform" action="mailto:mail@domain" enctype="text/plain" method="post">
+        <input type="text" name="name" id="name" label="name" />
+        <input type="date" name="datum" value="2012-01-01"/>
+        <input type="email" name="email" value="name@provider.de"/>
+        <input name="schwaz" type="color"/>
+        <button type="submit">Submit</button>
     </form>
  
 </main>
