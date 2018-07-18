@@ -12,6 +12,7 @@
 <main>
     <p>This site is for practicing web technologies. </p>
     
+    <div id="csstests">
     <div class="serif">
     Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.
     </div>
@@ -27,13 +28,43 @@
     <div class="fantasy">
     Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich.
     </div>
-
-
     
+    <div class="smalltext">
+        This is small text.
+        <div class="smaller">
+            This is smaller text.
+        </div>
+        <div class="bigger">
+            This is bigger text.
+        </div>
+    </div>
+
+    <div class="mediumtext">
+        This is medium text.
+        <div class="smaller">
+            This is smaller text.
+        </div>
+        <div class="bigger">
+            This is bigger text.
+        </div>
+    </div>
+    <div class="bigtext">
+        This is big text.
+        <div class="smaller">
+            This is smaller text.
+        </div>
+        <div class="bigger">
+            This is bigger text.
+        </div>
+    </div>
+
+    </div>
+    
+    <div id="forms">
     <form id="testform" action="mailto:mail@domain" enctype="text/plain" method="post">
         <label>einzeiliger text<input type="text" name="one-line" autofocus="autofocus" /></label><br/>
         <label>ja, ich will!<input type="checkbox" name="yes"/></label><br/>
-        <label>Mehrzeiliger Text<textarea name="mehrzeil">Äh... Hallo?</textarea><br />
+        <label>Mehrzeiliger Text<textarea name="mehrzeil">Äh... Hallo?</textarea></label><br />
         <label>Option selection:
             <select name="dropdown[]" multiple>
                 <option value="drop1">drop1</option>
@@ -84,8 +115,8 @@
     </label>
     
     <button type="submit">Anmelden</button>
-  </form
-
+  </form>
+  </div>
  
 </main>
 
