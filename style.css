@@ -38,4 +38,9 @@ table, td, th {
     font-family: fantasy;
 }
 
+.smalltext { font-size: small; }
+.mediumtext { font-size: medium; }
+.bigtext { font-size: large; }
 
+.smaller { font-size: smaller; }
+.bigger { font-size: larger; }
