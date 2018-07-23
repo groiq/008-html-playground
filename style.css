@@ -49,4 +49,17 @@ table.designtable {
     margin-left:auto;
     margin-right:auto;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background: #1a68be;
+    color: #ffffff;
+    width: 300px;
+    margin: 10px;
+    /*border: 10px;*/
+}
 /* div.table { text-align: center; } */
