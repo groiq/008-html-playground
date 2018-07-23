@@ -44,3 +44,9 @@ table, td, th {
 
 .bigger { font-size: larger; }
 .smaller { font-size: smaller; }
+
+table.designtable {
+    margin-left:auto;
+    margin-right:auto;
+}
+/* div.table { text-align: center; } */
