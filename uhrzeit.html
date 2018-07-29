@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeitkalkulator</title>
+<script>
+'use strict';  
+(function () {
+  function init () {
+      
+      var thisMoment = new Date();
+      //thisMoment.setHours(13,20,0,0);
+      var morning = new Date();
+      morning.setHours(8,0,0,0);
+      var feierabend = new Date();
+      feierabend.setHours(15,30,0,0);
+      //feierabend.setHours(16,0,0,0);
+      var gesamtzeit = (feierabend.getTime() - morning.getTime());
+      
+    document.getElementById('now').innerHTML = thisMoment;
+      //document.getElementById('morning').innerHTML = morning;
+      //document.getElementById("totalTime").innerHTML = gesamtzeit;
+      
+      var verstrichen = (thisMoment.getTime() - morning.getTime());
+      
+      var percent = ((verstrichen / gesamtzeit) * 100);
+      document.getElementById("percentage").innerHTML = percent;
+      
+      
+}
+ 
+	document.addEventListener(
+		"DOMContentLoaded",
+		function () { init(); }
+	);
+}());
+</script>
+
+</head>
+ 
+<body>
+<p>Zeit-Kalkulator</p>
+ <main>
+     
+     
+     
+     <dl>
+         <dt>Jetzt</dt>
+         <dd> <time aria-current="date" id="now"></time> </dd>
+         <dt>Prozent</dt>
+         <dd id="percentage"></dd>
+         
+     </dl>
+
+
+</main>
+</body>
+</html>
+
