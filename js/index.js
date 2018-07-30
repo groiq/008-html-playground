@@ -1,2 +1,3 @@
 // JavaScript Document
-alert("hallo");
+//alert("hallo");
+var hallo = "hallo";
