@@ -1,0 +1,65 @@
+/* body { */
+    /* background: #000000; */
+/* } */
+
+.redhead {
+        color: #ff0000;
+    }
+    
+.greenhorn {
+        color: #00ff00;
+    }
+    
+.blueblood {
+        color: #0000ff;
+    }
+    
+table, td, th {
+    border: 1px solid #000000;
+}
+
+.serif {
+    font-family: serif;
+}
+
+.sans-serif {
+    font-family: sans-serif;
+}
+
+.monospace {
+    font-family: monospace;
+}
+
+.cursive {
+    font-family: cursive;
+}
+
+.fantasy {
+    font-family: fantasy;
+}
+
+.smalltext { font-size: small; }
+.mediumtext { font-size: medium; }
+.bigtext { font-size: large; }
+
+.bigger { font-size: larger; }
+.smaller { font-size: smaller; }
+
+table.designtable {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background: #1a68be;
+    color: #ffffff;
+    width: 300px;
+    margin: 10px;
+    /*border: 10px;*/
+}
+/* div.table { text-align: center; } */
