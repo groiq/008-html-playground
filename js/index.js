@@ -4,12 +4,12 @@ function prod(j,k) {
     else if (k == 0) { result = j; }
     else { result = j^k; }
     // result = "rgb(0," + result + ",255)";
-    result += 60;
+    // result += 60;
     result = "hsl(" + result + ", 100%, 50%)";
     return result;
 }
 
-var i = 255;
+var i = 360;
 
 document.write("<table>");
 
