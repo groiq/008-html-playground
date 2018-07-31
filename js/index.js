@@ -11,12 +11,11 @@ var i = 255;
 
 document.write("<table>");
 
-for (var j = 0; j < i; j += 16) {
+for (var j = 0; j < i; j++) {
     document.write("<tr>");
         for (var k = 0; k < i; k++) {
             // document.write("<td style='background-color:" + prod(j,k) + "'>" + prod(j,k) + "</td>");
-            document.write("<td style='background-color:" + prod(j,k) + "'>&nbsp;</td>");
-            // document.write("<td width ='5' bgcolor='" + prod(j,k) + "'>" + prod(j,k) + "</td>");
+            document.write("<td style='background-color:" + prod(j,k) + "'></td>");
         }
     document.write("</tr>");
 }
