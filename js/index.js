@@ -2,7 +2,7 @@ function prod(j,k) {
     var result;
     if (j == 0) { result = k; }
     else if (k == 0) { result = j; }
-    else { result = j*k; }
+    else { result = j^k; }
     return result;
 }
 
