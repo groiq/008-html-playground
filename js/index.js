@@ -3,7 +3,9 @@ function prod(j,k) {
     if (j == 0) { result = k; }
     else if (k == 0) { result = j; }
     else { result = j^k; }
-    result = "rgb(0," + result + ",255)"
+    // result = "rgb(0," + result + ",255)";
+    result += 60;
+    result = "hsl(" + result + ", 100%, 50%)";
     return result;
 }
 
