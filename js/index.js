@@ -3,7 +3,7 @@ function prod(j,k) {
     if (j == 0) { result = k; }
     else if (k == 0) { result = j; }
     else { result = j^k; }
-    result = "rgb(" + result + "," + result + "," + result + ")"
+    result = "rgb(0," + result + ",255)"
     return result;
 }
 
