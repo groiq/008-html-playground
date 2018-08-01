@@ -1,22 +1,17 @@
-function sel(shape) {
-    if (shape == "dreieck") {
-        function calc(length) {
-            return (length * length);
-        }
-    }
-    else if (shape == "quadrat") {
-        function calc(length) {
-            return (length * length / 2);
-        }
-    }
-    
+yellMode = "normal";
+if (yellMode == "normal") {
+    function yell(content) { document.write(content); }
 }
-
-function a(shape, length) {
-    sel(shape);
-    var result = calc(length);
-    return result;
+else if (yellMode == "obtrusive") {
+    function yell(content) { alert(content); }
 }
+yell("Welt!");
 
-document.write(a("quadrat",2));
-document.write(a("dreieck",2));
+yellMode = "obtrusive";
+if (yellMode == "normal") {
+    function yell(content) { document.write(content); }
+}
+else if (yellMode == "obtrusive") {
+    function yell(content) { alert(content); }
+}
+yell("Hallo!");
