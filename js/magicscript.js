@@ -1,1 +1,1 @@
-
+defAFunc();
