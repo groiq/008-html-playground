@@ -8,5 +8,5 @@ for (var i=0; i<11; i++) {
             document.write(", ");
         }
     }
-    document.write("));<br />");
+    document.write(") + '&lt;br /&gt;');<br />");
 }
