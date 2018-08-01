@@ -1,1 +1,2 @@
-alert(function() {return "hello!";}());
+var yellie = function() { return "Hello!"; }
+alert(yellie());
