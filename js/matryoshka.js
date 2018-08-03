@@ -1,6 +1,6 @@
 //a little story about matryoshkas.
 
-document.write("<p>A wooden doll is standing on the table. The sage old man says, 'This is a matryoshka. They sometimes contain little pearls of wisdom.'</p>");
+document.write("<p>A wooden doll is standing on the table. The sage says, 'This is a matryoshka. Sometimes they contain little pearls of wisdom.'</p>");
 
 function openMatryoshka(count,total) {
     document.write("I open matryoshka number " + count + ". ");
@@ -18,4 +18,11 @@ document.write("<p>");
 openMatryoshka(0,4);
 document.write("</p>");
 
-document.write("<p>'So, what do you think?' I am asked.<br />'Well, this is a very layered piece of wisdom.'")
+document.write("<p>'So, what do you think?' I am asked.<br />'Well, this is a very layered piece of wisdom.'");
+
+/*
+Further todo
+
+make "total" a global variable
+move the strings out of the source code.
+*/
