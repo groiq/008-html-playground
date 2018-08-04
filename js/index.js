@@ -3,7 +3,13 @@ function character(name,race,profession,weapon) {
     this.race = race;
     this.profession = profession;
     this.weapon = weapon;
+    this.greet = greet;
 }
+
+function greet() {
+        result = "Hello, my name is " + this.name + ".";
+        document.write(result);
+    }
 
 function weapon(type,range,hand) {
     this.type = type;
@@ -21,3 +27,15 @@ for (var field in gavin) {
     document.write(gavin.field);
     document.write("<br />");
 }
+
+gavin.greet();
+
+/*output:
+
+name: Gavin of Anywhere, not undefined
+race: human, not undefined
+profession: warrior, not undefined
+weapon: [object Object], not undefined
+greet: function greet() { result = "Hello, my name is " + this.name + "."; document.write(result); }, not undefined
+Hello, my name is Gavin of Anywhere. 
+*/
