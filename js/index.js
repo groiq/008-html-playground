@@ -1,46 +1,57 @@
-function character(name,race,profession,weapon) {
-    this.name = name;
-    this.race = race;
-    this.profession = profession;
-    this.weapon = weapon;
-    this.greet = greet;
-    this.fight = function() {
-        document.write("I wield my " + this.weapon.type + "!");
-    }
-}
 
-function greet() {
-        result = "Hello, my name is " + this.name + ".";
-        document.write(result);
-    }
-
-function weapon(type,range,hand) {
-    this.type = type;
-    this.range = range;
-    this.hand = hand;
-}
-
-var gavin = new character("Gavin of Anywhere", "human", "warrior", new weapon("sword","melee","main hand"));
-
-for (var field in gavin) {
-    document.write(field);
-    document.write(": ");
-    document.write(gavin[field]);
-    document.write(", not ");
-    document.write(gavin.field);
+function say(text) {
+    document.write(text);
     document.write("<br />");
 }
 
-gavin.greet();
-gavin.fight();
+var continents = ["europe","america"];
 
-/*output:
+function city(continent) {
+    this.continent = continent;
+}
 
-name: Gavin of Anywhere, not undefined
-race: human, not undefined
-profession: warrior, not undefined
-weapon: [object Object], not undefined
-greet: function greet() { result = "Hello, my name is " + this.name + "."; document.write(result); }, not undefined
-fight: function() { document.write("I wield my " + this.weapon.type + "!"); }, not undefined
-Hello, my name is Gavin of Anywhere.I wield my sword! 
-*/
+var paris = new city(continents[0]);
+var athens = new city(continents[0]);
+var la = new city(continents[1]);
+
+/*say(paris.continent);
+say(athens.continent);
+say(la.continent);*/
+
+var truck = {
+    cargo: "solid",
+    location: paris,
+    range: this.location.continent,
+    kmCost: 10,
+    cost: function(dist) {
+        return (this.kmCost * dist);
+    }
+};
+say(truck.location.continent);
+say(truck.range);
+
+var tankTruck = Object.create(truck);
+tankTruck.cargo = "liquid";
+tankTruck.location = la;
+
+var plane = Object.create(truck);
+plane.airportCost = 100;
+plane.cost = function(dist) {
+    return ((this.kmCost * dist) + this.airportCost);
+};
+plane.range = continents;
+
+var transporters = [truck, tankTruck, plane];
+
+for (var transporterIndex in transporters) {
+    transporter = transporters[transporterIndex];
+    say(transporter);
+    say(transporter.cargo);
+    say(transporter.location);
+    say(transporter.range);
+    say(transporter.cost);
+    say(transporter[cargo]);
+    say(transporter[range]);
+    //say(transporter.cost(100));
+    say(transporter[cost]);
+}
