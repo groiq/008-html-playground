@@ -9,3 +9,10 @@ var gavin = {
     }
 };
 
+for (var field in gavin) {
+    document.write(field);
+    document.write(": ");
+    //document.write(gavin.field);
+    document.write(gavin[field]);
+    document.write("<br />");
+}
