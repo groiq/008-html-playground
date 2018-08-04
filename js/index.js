@@ -1,17 +1,17 @@
-var gavin = {
-    name: "Gavin of Anywhere",
-    race: "human",
-    profession: "warrior",
-    weapon: {
-        type: "sword",
-        range: "melee",
-        hand: "main hand"
-    },
-    greet: function() {
-    result = "Hello, I'm " + this.name;
-    document.write(result);
+function character(name,race,profession,weapon) {
+    this.name = name;
+    this.race = race;
+    this.profession = profession;
+    this.weapon = weapon;
 }
-};
+
+function weapon(type,range,hand) {
+    this.type = type;
+    this.range = range;
+    this.hand = hand;
+}
+
+var gavin = new character("Gavin of Anywhere", "human", "warrior", new weapon("sword","melee","main hand"));
 
 for (var field in gavin) {
     document.write(field);
@@ -21,14 +21,3 @@ for (var field in gavin) {
     document.write(gavin.field);
     document.write("<br />");
 }
-
-gavin.greet();
-
-/*output:
-name: Gavin of Anywhere, not undefined
-race: human, not undefined
-profession: warrior, not undefined
-weapon: [object Object], not undefined
-greet: function() { result = "Hello, I'm " + this.name; document.write(result); }, not undefined
-Hello, I'm Gavin of Anywhere 
-*/
