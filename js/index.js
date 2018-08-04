@@ -1,9 +1,22 @@
-function character(race,profession) {
+function character(race,profession,weapon) {
     this.race = race;
     this.profession = profession;
+    this.weapon = weapon;
 }
 
-var Gavin = new character("human","warrior");
+function weapon(range,hand) {
+    this.range = range;
+    this.hand = hand;
+}
 
-document.write(Gavin);
-document.write(Gavin.profession);
+var sword = new weapon("melee","main hand");
+var Gavin = new character("human","warrior",sword);
+
+function print(text) {
+    document.write(text + "<br />");
+}
+
+print(Gavin);
+print(Gavin.profession);
+print(Gavin.weapon);
+print(Gavin.weapon.hand);
