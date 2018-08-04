@@ -9,8 +9,8 @@ function weapon(range,hand) {
     this.hand = hand;
 }
 
-var sword = new weapon("melee","main hand");
-var Gavin = new character("human","warrior",sword);
+
+var Gavin = new character("human","warrior",new weapon("melee","main hand"));
 
 function print(text) {
     document.write(text + "<br />");
