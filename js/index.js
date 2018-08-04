@@ -1,8 +1,9 @@
-var video = {
-    length: 90,
-    play: function() {
-    return "The video runs for " + this.length + " minutes.";
+function character(race,profession) {
+    this.race = race;
+    this.profession = profession;
 }
-};
 
-document.write(video.play);
+var Gavin = new character("human","warrior");
+
+document.write(Gavin);
+document.write(Gavin.profession);
