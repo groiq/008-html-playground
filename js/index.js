@@ -19,22 +19,32 @@ say(athens.continent);
 say(la.continent);*/
 
 var truck = {
+    name: "truck",
     cargo: "solid",
     location: paris,
+    //range: this.location.continent,
     range: this.location.continent,
     kmCost: 10,
     cost: function(dist) {
         return (this.kmCost * dist);
     }
 };
+//say(truck.location);
 say(truck.location.continent);
+//say(athens.continent);
+//say(europe.continent);
 say(truck.range);
+say(truck[range]);
+say("");
+
 
 var tankTruck = Object.create(truck);
+tankTruck.name = "Tank truck";
 tankTruck.cargo = "liquid";
 tankTruck.location = la;
 
 var plane = Object.create(truck);
+plane.name = "Cargo Plane";
 plane.airportCost = 100;
 plane.cost = function(dist) {
     return ((this.kmCost * dist) + this.airportCost);
@@ -44,14 +54,16 @@ plane.range = continents;
 var transporters = [truck, tankTruck, plane];
 
 for (var transporterIndex in transporters) {
-    transporter = transporters[transporterIndex];
-    say(transporter);
+    var transporter = transporters[transporterIndex];
+    //say(transporter);
+    say(transporter.name);
     say(transporter.cargo);
-    say(transporter.location);
+    //say(transporter.location);
     say(transporter.range);
     say(transporter.cost);
-    say(transporter[cargo]);
-    say(transporter[range]);
-    //say(transporter.cost(100));
-    say(transporter[cost]);
+    //say(transporter.cargo);
+    say(transporter.range);
+    say(transporter.cost(100));
+    //say(transporter.cost);
+    say("---");
 }
