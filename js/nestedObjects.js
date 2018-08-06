@@ -2,32 +2,22 @@ function say(text) {
             document.write(text + "<br />");
         }
         
-      var sweden = {
-          name: "Sweden",
-          continent: "Europe"
-      };
+function country(name,continent) {
+    this.name = name;
+    this.continent = continent;
+}
 
-var cont = function(country) {
-    return country.continent;
-};
-      
-      var stockholm = {
-          name: "Stockholm",
-          country: sweden,
-          //continent: this.country.continent
-         
-          continent: cont(this.country),
-      };
-      
-      say(sweden.name);
-        say(sweden.continent);
-        
-        say(stockholm.name);
-        say(stockholm.country);
-        say(stockholm.country.name);
-        say(stockholm.country.continent);
-        //say(stockholm.continent);
+function city(name,country) {
+    this.name = name;
+    this.country = country;
+    this.continent = this.country.continent;
+}
+
+var sweden = new country("Sweden","Europe");
+var stockholm = new city("Stockholm",sweden);
+
+say(sweden.name);
+say(sweden.continent);
+say(stockholm.name);
+say(stockholm.country.name);
 say(stockholm.continent);
-say(stockholm.continent());
-
-    
