@@ -1,12 +1,10 @@
-var character = {
+var chlegg = {
+    name: "chlegg",
     race: "asura",
-    stats: function() {
-        return "The race is " + this.race + " and the profession is " + this.profession + ".";
-    }
+    profession: "mesmer",
+    title: "psychotect"
+};
+
+with (chlegg) {
+    document.write(name + " is an " + race + " " + profession + " who uses the title " + title + ".");
 }
-
-document.write(character.stats());
-
-character.profession = "mesmer";
-
-document.write(character.stats());
