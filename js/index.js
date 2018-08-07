@@ -5,6 +5,6 @@ var chlegg = {
     title: "psychotect"
 };
 
-with (chlegg) {
-    document.write(name + " is an " + race + " " + profession + " who uses the title " + title + ".");
+for (var field in chlegg) {
+    document.write(field + ": " + chlegg[field] +  "<br />");
 }
