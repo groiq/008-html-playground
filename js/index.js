@@ -1,42 +1,41 @@
 
+var stats = ["staerke","geschick","wille","magie","klugheit","konstitution"];
+var stats = {
+    staerke: 10,
+    geschick: 10,
+    wille: 10,
+    magie: 10,
+    klugheit: 10,
+    konstitution: 10
+};
 
-function die(eyes) {
-    this.eyes = eyes;
-    this.roll = function() {
-        var rawRandom = Math.random() * eyes;
-        var result = Math.floor(rawRandom) + 1;
-        return result;
-        //return this.eyes;
-    }
-    this.statistic = function(tries) {
-        var stats = {};
-        for (var i=0;i<eyes;i++) {
-            stats[(i+1)] = ":";
-        };
-        for(var i=0; i < tries; i++) {
-            //say("what?");
-            var cast = this.roll();
-            //say(cast);
-            stats[cast] += "x";
-        }
-        for (var j in stats) { say(j + ": " + stats[j]); }
-    };
+function val(x) {
+    var result;
+    if (x) { result = x; }
+    else { result = 0;}
+    return result;
 }
 
-var tries = 500;
+var human = {staerke:1,geschick:1,magie:1,klugheit:1};
+var elf = {wille:2,magie:2};
+var dwarf = {staerke:1,geschick:1,konstitution:2};
 
-say("1d6:");
-var d6 = new die(6);
-d6.statistic(tries);
+var warrior = {staerke:4,geschick:3,konstitution:3};
+var mage = {magie:5,wille:4,klugheit:1};
+var rogue = {geschick:4,wille:2,klugheit:4};
 
-/*say("1d20:");
-var d20 = new die(20);
- d20.statistic(tries);*/
+var races = [human,elf,dwarf];
+var classes = [warrior,mage,rogue];
 
-/*
-Todo: Implement 2dx. The difficulty being that the range of 2d6 aren't 1-12, but 2-12.
-And there's a higher chance of rolling 6 that 1.
-A, just do those things with two instances.
+for (var stat in stats) {
+    say(stat);
+    
+    say(elf[stat]);
+    say(stats[stat] + val(elf[stat]));
+}
 
-Rewrite the statistics function so it returns the array rather than printing ist...
-*/
+document.write("<table>");
+
+//document.write()
+
+document.write("</table>");
