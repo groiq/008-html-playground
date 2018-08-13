@@ -1,7 +1,9 @@
-var gaps = new Array();
+var olds = ["human","elf","dwarf"];
 
-gaps[2] = "vier";
+var gw = ["asura","norn"];
 
-for (var pos in gaps) { say(pos + ": " + gaps[pos]); }
+var got = ["white walker"];
 
-say(gaps[3]);
+olds = olds.concat(gw,got);
+
+for (var race in olds) { say(race + ": " + olds[race]);}
