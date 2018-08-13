@@ -1,12 +1,13 @@
 var gaps = new Array();
 
-gaps[3] = "hello";
+gaps["string"] = "hello";
 
 list(gaps);
 
 say(gaps.length);
 
 /* output:
-3: hello
-4
+string: hello
+0
+
 */
