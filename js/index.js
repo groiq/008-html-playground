@@ -1,13 +1,13 @@
 var gaps = new Array();
 
-gaps["string"] = "hello";
+gaps[3] = "hello";
+gaps[5] = "world";
+
+say(gaps.pop());
 
 list(gaps);
 
-say(gaps.length);
-
 /* output:
-string: hello
-0
-
+world
+3: hello
 */
