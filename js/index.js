@@ -1,11 +1,11 @@
-var functionList = [
-  function(i) { alert(i + "one!"); },
-    function(i) { alert(i + "two!"); }
-];
+var permutations = [
+    function(i) { return (i*2); },
+    function(i) { return (i*3); }
+]
 
 var i = 1;
-i *= 2;
-i *= 3;
-say(i);
+for (var permutation in permutations) {
+    i = permutations[permutation](i);
+}
 
-for (var j in functionList) { functionList[j](i); }
+say(i);
