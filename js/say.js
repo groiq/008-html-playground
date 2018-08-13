@@ -7,3 +7,4 @@ function list(array) {
         say(index + ": " + array[index]);
     }
 }
+// things to do: write this function recursively
