@@ -1,5 +1,8 @@
 
-var stats = ["staerke","geschick","wille","magie","klugheit","konstitution"];
+function val(x) {
+    return ( x ? x : 0  );
+}
+
 var stats = {
     staerke: 0,
     geschick: 1,
@@ -8,13 +11,6 @@ var stats = {
     klugheit: 2,
     konstitution: 0
 };
-
-function val(x) {
-    var result;
-    if (x) { result = x; }
-    else { result = 0;}
-    return result;
-}
 
 var races = {
     none: {},
@@ -49,7 +45,6 @@ for (var profession in professions) {
         for (var stat in stats) {
             document.write("<li>");
             document.write(stat + ": ");
-            //document.write(stats[stat]);
             total += (val(professions[profession][stat]*stats[stat]));
             total += (val(races[race][stat]*stats[stat]));
             document.write(10 + val(professions[profession][stat]) + val(races[race][stat]));
