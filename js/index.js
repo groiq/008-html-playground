@@ -1,15 +1,6 @@
 var possibleStates = [0,1];
 
-var permutations = {
-    byTwo: function(i) { return (i*2); },
-    byThree: function(i) {return (i*3); },
-    byFour: function(i) { return (i*4); }
-};
-
-
 function generateCases(switchArray,possibleStates) {
-    
-    
     
     var allStates = [];
     var currentStates = [];
@@ -60,9 +51,9 @@ function generateCases(switchArray,possibleStates) {
 
 }
 
-var allCases = generateCases(permutations,possibleStates);
+//var allCases = generateCases(permutations,possibleStates);
 
-function performPermutations(data, permutationFlags) {
+function performPermutations(data, permutations, permutationFlags) {
     var result = "";
     for (var permutation in permutationFlags) {
         if (permutationFlags[permutation]) {
@@ -75,10 +66,44 @@ function performPermutations(data, permutationFlags) {
     return result;
 }
 
+function listAllPermutations(data,permutations) {
+    var allCases = generateCases(permutations,possibleStates);
+    for (var testCase in allCases) {
+        say(performPermutations(data,permutations,allCases[testCase]));
+    }
+}
+
 var testData = 1;
 
-for (var testCase in allCases) {
-    say(performPermutations(testData,allCases[testCase]));
-}
+var multiplications = {
+    byTwo: function(i) { return (i*2); },
+    byThree: function(i) {return (i*3); },
+    byFour: function(i) { return (i*4); }
+};
+
+//listAllPermutations(testData,multiplications);
+
+var arr = new Array();
+arr[1] = "hello";
+arr[4] = "world";
+
+var arrPermutations = {
+    reverse: function(i) {
+        return i.slice().reverse();
+        /*var j = i.slice();
+        j.reverse();
+        return j;*/
+    },
+    fillGaps: function(i) {
+        var j = i.slice();
+        for (var k=0; k<j.length; k++) {
+            if (!j[k]) { j[k] = 0; }
+        }
+        return j;
+    },
+   // nocheins: function(i) { return i; }
+};
+
+listAllPermutations(arr,arrPermutations);
 
 //say(performPermutations(testData,permutationFlags));
