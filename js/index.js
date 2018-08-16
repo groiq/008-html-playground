@@ -45,7 +45,8 @@ function generateCases(switchArray,possibleStates) {
     //list(allStates);
     //for (var i in allStates) { say(allStates[i]); }
     //document.write(JSON.stringify(allStates,undefined,2));
-    console.log(JSON.stringify(allStates,"---",2));
+    //console.log(JSON.stringify(allStates,"---",2));
+    list(allStates);
     return allStates;
     
 
@@ -81,7 +82,7 @@ var multiplications = {
     byFour: function(i) { return (i*4); }
 };
 
-//listAllPermutations(testData,multiplications);
+listAllPermutations(testData,multiplications);
 
 var arr = new Array();
 arr[1] = "hello";
