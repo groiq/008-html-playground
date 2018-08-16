@@ -4,8 +4,22 @@ var permutations = {
     byThree: function(i) {return (i*3); }
 };
 
-
-
-for (var permutation in permutations ) {
-    say(permutation);
+function performPermutations(data, permutationFlags) {
+    for (var permutation in permutationFlags) {
+        if (permutationFlags[permutation]) {
+            data = permutations[permutation](data);
+        }
+    }
+    return data;
 }
+
+
+
+var permutationFlags = {
+    byTwo: 0,
+    byThree: 1
+};
+
+var testData = 1;
+
+say(performPermutations(testData,permutationFlags));
