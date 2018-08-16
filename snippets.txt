@@ -28,32 +28,7 @@ for (var array in arrays) {
     list(arrays[array]);
 }
 
-/* output:
-gaps: ,Hello,,,World
-gapsReversed: World,,,Hello,
-filled: 0,Hello,0,0,World
-filledReversed: World,0,0,Hello,0
 
-gaps:
-1: Hello
-4: World
-gapsReversed:
-0: World
-3: Hello
-filled:
-0: 0
-1: Hello
-2: 0
-3: 0
-4: World
-filledReversed:
-0: World
-1: 0
-2: 0
-3: Hello
-4: 0
-6: !
-*/
 
 /*
 Things to do: Automate modification by flags:
