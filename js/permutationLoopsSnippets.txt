@@ -1,0 +1,95 @@
+"toggle" various permutations on a gapped array:
+
+var keywords = ["gaps","gapsReversed","filled","filledReversed"];
+
+var arrays = new Array();
+
+for (var kwdIndex in keywords) {
+    var keyword = keywords[kwdIndex];
+    arrays[keyword] = new Array();
+    var arr = arrays[keyword];
+    arr[1] = "Hello";
+    arr[4] = "World";
+    if (keyword.match(/.*filled.*/i)) {
+        for (var i=0;i<arr.length;i++) {
+            if (!arr[i]) { arr[i] = 0; }
+        }
+    }
+    if (keyword.match(/.*Reverse.*/i)) {
+        arr.reverse();
+    }
+}
+
+list(arrays);
+say("");
+
+for (var array in arrays) {
+    say(array + ": ");
+    list(arrays[array]);
+}
+
+
+
+/*
+Things to do: Automate modification by flags:
+you have an object (called modifications or something) with entries such as "reverse:" x.reverse()
+for every entry in the modifications object you create one array where the modification is done and one where it isn't.
+That means that I'll have to write a "generate all possible test cases" script again!
+*/
+
+---------------------------------------
+
+looping through possible test cases:
+
+var switchList = ["stgh","wozi","kue"];
+var possibleStates = [0,1];
+//var possibleStates = ["on","off"];
+
+var allStates = [];
+var currentStates = [];
+for (var i in switchList) { currentStates.push(possibleStates[0]); }
+
+function fillValues(currentSwitch) {
+    for (var currentState in possibleStates) {
+        currentStates[currentSwitch] = possibleStates[currentState];
+        //say(currentStates);
+        if (currentSwitch < (switchList.length - 1)) {
+            fillValues(currentSwitch + 1);
+        } else {
+            //say(currentStates);
+            var currentStateDict = {};
+            for (var i in switchList) {
+                //say(i);
+                //say(currentStates[i]);
+                var curSwitch = switchList[i];
+                //say(curSwitch);
+                currentStateDict[curSwitch] = currentStates[i];
+                //var switch = switchList[i];
+                //currentStateDict[switch] = currentStates[i];
+                
+            }
+            list(currentStateDict);
+            allStates.push(currentStateDict);
+        }
+    }
+}
+
+fillValues(0);
+list(allStates);
+
+-------------------------------------------------------
+
+looping through an array of functions:
+
+
+var permutations = [
+    function(i) { return (i*2); },
+    function(i) { return (i*3); }
+]
+
+var i = 1;
+for (var permutation in permutations) {
+    i = permutations[permutation](i);
+}
+
+say(i);
