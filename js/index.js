@@ -44,9 +44,7 @@ function generateCases(switchArray,possibleStates) {
     fillValues(0);
     //list(allStates);
     //for (var i in allStates) { say(allStates[i]); }
-    //document.write(JSON.stringify(allStates,undefined,2));
-    //console.log(JSON.stringify(allStates,"---",2));
-    list(allStates);
+    //list(allStates);
     return allStates;
     
 
