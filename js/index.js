@@ -32,4 +32,11 @@ function fillValues(currentSwitch) {
 }
 
 fillValues(0);
-list(allStates);
+//list(allStates);
+
+var data = new Object();
+data.nest = allStates;
+data.number = 5;
+
+data.races = switchList;
+list(data);
