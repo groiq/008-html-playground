@@ -4,13 +4,13 @@ function say(text) {
 
 
 function list(array) {
-    
-    // pretty-print complex array to console
+    //stringify array
     array = JSON.stringify(array,"---",2);
+    //write string to page
     document.write("<pre>");
     document.write(array);
     document.write("</pre>");
-    console.log(array);
+    // log to console
+    //console.log(array);
     
 }
-// things to do: write this function recursively
