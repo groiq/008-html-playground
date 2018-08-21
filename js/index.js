@@ -26,3 +26,17 @@ function displayDuration() {
     }
     document.getElementById("dispadur").innerHTML=dispDuration;
 }
+
+function mouseUp(evt) {
+    var i = "hello";
+    i += "<br />";
+    i += evt;
+    for (var j in evt) {
+        i = i + j + ": " + evt[j] + "<br />";
+    }
+    document.getElementById("imgInfo").innerHTML = i;
+}
+
+document.onmouseup = mouseUp;
+
+//document.body.addEventListener("mouseup", mouseUp(), true);
