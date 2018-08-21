@@ -18,7 +18,7 @@ function showBigImg(img) {
 }
 
 function displayDuration() {
-    var newDuration = prompt("Anzeigedauer:");
+    var newDuration = prompt("Anzeigedauer:",dispDuration);
     if(newDuration > 0 && newDuration < 21) {
         dispDuration = newDuration;
     } else {
