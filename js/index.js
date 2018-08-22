@@ -18,6 +18,23 @@ window.onload=function() {
 };
 
 function parseForm() {
+    // document.getElementById("result").innerHTML = document.getElementById("form1").userText.value;
+    var result = "You have covered these use cases: ";
+    with (document.getElementById("form1").weapons) {
+        for (var option in options) {
+            result += option;
+            result += options[option];
+        }
+    }
+   /* for (var option in document.getElementById("form1").weapons.options) {
+        //result += option;
+        if (option.selected) {
+            result += option;
+        }
+    }*/
     
+    
+    document.getElementById("result").innerHTML = result;
+    //document.getElementById("form1").weapons.value;
    
 }
