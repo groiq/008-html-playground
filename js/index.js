@@ -1,5 +1,10 @@
 window.onload=function() {
     
+    var weapons = ["sword","shield","bow","staff","axe"];
+    var usages = ["melee","defensive","ranged","supportive","conditions"];
+    
+    
+    
     document.getElementById("submit").onclick = parseForm;
     
 };
