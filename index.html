@@ -12,14 +12,55 @@
 </head>
 <body>
     
+    <div id="log">&nbsp;</div>
+    <div id="prompt">&gt;&nbsp;
+        <span id="oldin">&nbsp;</span>
+        <span id="input"></span>
+    </div>
+    
+    
+    
+       
     <script type="text/javascript">
+        
+        var stack = [];
+        
+        function n(i) {
+            document.getElementById("input").innerHTML += i;
+        }
+        
+        function parse(sign) {
+            var fullNum = document.getElementById("input").innerHTML;
+            var result = fullNum + ": " + typeof fullNum;
+            document.getElementById("log").innerHTML += result;
+            stack.push(Number(fullNum));
+            document.getElementById("oldin").innerHTML += fullNum + sign;
+            document.getElementById("input").innerHTML = "";
+        }
+        
+        function plus() {
+            parse("+");
+        }
+        
+        function times() {
+            parse("*");
+        }
+        
+        function equals() {
+            parse("=");
+        }
     
     </script>
-  
-    <form>
     
-        <input type="text" id="display" readonly>
-        <input type="button" name="3" onClick="n3()">
+    
+        <form>
+        <button type="button" onClick="n(2)">2</button>
+        <button type="button" onClick="n(3)">3</button>
+        <button type="button" onClick="n(4)">4</button>
+            
+            <button type="button" onClick="plus()">+</button>
+            <button type="button" onClick="times()">*</button>
+            <button type="button" onClick="equals()">=</button>
                
     
     </form>
