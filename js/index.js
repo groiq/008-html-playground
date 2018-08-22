@@ -1,3 +1,9 @@
 window.onload=function() {
-    document.getElementById("test").innerHTML = "HAL, do you read me?";
+    
+    document.getElementById("submit").onclick = parseForm;
+    
+}
+
+function parseForm() {
+    document.getElementById("result").innerHTML = document.getElementById("userText").innerHTML;
 }
