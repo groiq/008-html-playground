@@ -25,11 +25,23 @@ function parseForm() {
     }*/
     function checkForm(field) {
         var reference = "1234567890";
-        for (var c in field.value) {
+        var numbery = true;
             
+        for (var c in field.value) {
+            if (reference.indexOf(field.value.charAt(c)) == -1) {
+                numbery  = false;
+               
+            } 
+        }
+        if (numbery == true) {
+            result += field.value + "<br />";
+        } else {
+            result += "error: " + field.name + ": only numbers<br /";
+            field.focus();
         }
     }
-    result += form.Gewicht.value;
+    checkForm(form.Gewicht);
+    checkForm(form.age);
    
 
     document.getElementById("result").innerHTML = result;
