@@ -1,7 +1,6 @@
 window.onload=function() {
     
-        
+    console.log("Hallo Welt!");    
     
-    //document.getElementById("submit").onclick = parseForm;
     
 };
