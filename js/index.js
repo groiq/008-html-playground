@@ -1,9 +1,8 @@
-window.onLoad = function() {
-    var output = document.getElementById("output");
-}
-
-window.addEventListener("error", fehlerbehandlung);
-
-function fehlerbehandlung (errorEvent) {
+window.onload = function() {
+    var output = "set";
     
-}
+    window.addEventListener("error", fehlerbehandlung);
+    
+    
+    document.getElementById("output").innerHTML = output;
+};
