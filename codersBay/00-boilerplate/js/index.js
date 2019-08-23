@@ -1,3 +1,53 @@
+var output = "unchanged boilerplate output";
+var unformattedOutput = "unchanged boilerplate unformatted output";
+
+function list(object) {
+    object = JSON.stringify(object, "---",2);
+    unformattedOutput = object;
+    console.log(object);
+
+}
+
+
+
+window.onload = function() {
+    // var result = doSomething();
+    // document.getElementById("output").innerHTML = result;
+    document.getElementById("outputGoesHere").innerHTML = output;
+    document.getElementById("unformattedOutput").innerHTML = unformattedOutput;
+
+    
+}
+
+var team = {
+	"teamID" : 1,
+	"function" : "Website generation",
+	"members" : [
+					{
+						"id" : 1,
+						"name" : "Alice",
+						"function" : "database administration"
+					},
+					{
+						"id" : 2,
+						"name" : "Bob",
+						"function" : "backend development"
+					},
+					{
+						"id" : 3,
+						"name" : "Charlie",
+						"function" : "frontend development",
+					},
+					{
+						"id" : 4,
+						"name" : "Dan",
+						"function" : "graphic design"
+					}
+				]
+}
+
+list(team);
+
 /* function say(text) {
     document.write(text + "<br />");
 }
