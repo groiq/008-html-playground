@@ -11,17 +11,58 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <!-- <h1>Hello, world!</h1> -->
+  
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">gepardec</a>
+    <!-- replace text with brand icon! -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Onboarding</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Mitarbeiter</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Aufgaben</a>
+        </li>
+      </ul>
+    </div>
 
-    <nav class="navbar navbar-toggleable-md navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+    <form class="form-inline">
+      <button class="btn btn-outline-light">Username</button>
+    </form>
 
-        <!-- <span class="navbar-text">navigare necesse est.</span>  -->
-    </nav>
+  </nav>
 
+
+
+  <hr/>
+  <div class="container" ng-controller="UserController">
+      <div class="row">
+          <label>User</label> <input type="text" ng-model="userDto.userName" class="input-sm spacing"/>
+          <label>Skills</label> <input type="text" ng-model="skills" ng-list class="input-sm custom-width spacing"
+                                       placeholder="use comma to separate skills"/>
+          <button ng-click="saveUser()" class="btn btn-sm btn-info">Save User</button>
+      </div>
+      <hr/>
+      <div class="row">
+          <p>{{allUsers | json}}</p>
+      </div>
+      <hr/>
+      <div class="row" ng-repeat="user in allUsers">
+          <div class="">
+              <h3>{{user.userName}}</h3>
+              <span ng-repeat="skill in user.skillDtos" class="spacing">{{skill.skillName}}</span>
+          </div>
+      </div>
+  </div>
+  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
